@@ -1,0 +1,22 @@
+{
+  "icon_theme": "Catppuccin Frappé",
+  "disable_ai": false,
+  "session": {
+    "trust_all_worktrees": true,
+  },
+
+  "theme": "Catppuccin Frappé",
+
+  "buffer_font_family": "HackGen Console NF",
+  "show_whitespaces": "all",
+  "indent_guides": {
+    "enabled": true,
+    "background_coloring": "indent_aware",
+    "coloring": "indent_aware",
+  },
+
+  "vim_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+  },
+}

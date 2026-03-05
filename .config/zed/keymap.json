@@ -1,0 +1,60 @@
+[
+  // workspace
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus",
+    },
+  },
+  // vim insert mode
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j j": "vim::NormalBefore",
+    },
+  },
+  // vim normal mode
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+    },
+  },
+  // vim normal and visual mode
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !menu",
+    "bindings": {
+      "J": ["workspace::SendKeystrokes", "1 0 j"],
+      "K": ["workspace::SendKeystrokes", "1 0 k"],
+      "H": "vim::FirstNonWhitespace",
+      "L": "vim::EndOfLine",
+
+      "ctrl-j": "pane::ActivateNextItem",
+      "ctrl-k": "pane::ActivatePreviousItem",
+      "ctrl-h": "pane::GoBack",
+      "ctrl-l": "pane::GoForward",
+
+      "space w": "workspace::Save",
+      "space q": "pane::CloseActiveItem",
+
+      "space \\": "pane::SplitRight",
+
+      "space /": "editor::ToggleComments",
+      ">": "editor::Indent",
+      "<": "editor::Outdent",
+    },
+  },
+  // global vim control
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "space j": "workspace::ActivatePaneDown",
+      "space k": "workspace::ActivatePaneUp",
+      "space h": "workspace::ActivatePaneLeft",
+      "space l": "workspace::ActivatePaneRight",
+
+      "space space": "editor::OpenExcerpts",
+    },
+  },
+]
