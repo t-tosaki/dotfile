@@ -24,3 +24,7 @@ cp -r .config ~/
 
 # source dotfiles
 echo "\n\033[1;33m==>\033[0m source dotfiles"
+
+# setup nodebrew
+echo "\n\033[1;33m==>\033[0m setup nodebrew"
+nodebrew setup
