@@ -7,6 +7,6 @@ brew "eza"
 brew "bat"
 brew "neovim"
 brew "uv"
-brew "nodebrewe
+brew "nodebrew"
 
 cask "font-hackgen-nerd"
