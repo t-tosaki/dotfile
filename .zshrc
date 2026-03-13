@@ -4,8 +4,11 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-autoload -Uz compinit
-compinit
+fpath+=$(brew --prefix)/share/zsh-completions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -Uz compinit && compinit
 
 alias dc='docker compose'
 alias ls='eza'
